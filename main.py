@@ -61,4 +61,4 @@ streams = []
 
 if __name__ == "__main__":
     main()
-    print streams
+    print '\n'.join(streams)

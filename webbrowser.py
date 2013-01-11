@@ -32,7 +32,7 @@ class WebBrowser(QObject):
         self.web_view.settings().setAttribute(QWebSettings.AutoLoadImages,False)
         self.web_view.settings().setAttribute(QWebSettings.PluginsEnabled, True)
         self.web_view.settings().setAttribute(QWebSettings.JavascriptEnabled, True)
-        self.web_view.settings().setAttribute(QWebSettings.XSSAuditingEnabled, False)
+        # self.web_view.settings().setAttribute(QWebSettings.XSSAuditingEnabled, False)
         self.web_view.settings().setAttribute(QWebSettings.LocalContentCanAccessRemoteUrls, True) 
         self.connect(self.web_view.page().networkAccessManager(),SIGNAL("finished(QNetworkReply*)"),self.network_reply_finished)
         self.page_loaded_validator = None

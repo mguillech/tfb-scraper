@@ -2,7 +2,8 @@ from bottle import request, response, template, static_file, HTTPResponse
 import json
 import datetime
 import os
-from main import main, streams
+from settings import ROOT_PATH
+from scraper import main, streams
 from utils import custom_static_file
 
 def get():

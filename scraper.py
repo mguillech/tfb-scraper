@@ -15,7 +15,6 @@ def process_iframe_links():
 
 def get_sc_link():
     anchor = wb.web_view.page().currentFrame().findFirstElement('a.g-sc-logo')
-    import pdb ; pdb.set_trace()
     if anchor:
         sc_link = anchor.attribute('href')
         if sc_link:

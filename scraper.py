@@ -8,8 +8,6 @@ import sys
 
 from webbrowser import WebBrowser
 
-app = QApplication(sys.argv)
-
 
 class TFBScrape(object):
     def __init__(self):
@@ -38,7 +36,6 @@ class TFBScrape(object):
             self.wb.event_loop.exec_()
 
         self.wb.app.exit()
-        app.exit()
 
     def process_iframe_links(self):
         self.links.extend([ e.attribute('src') for e in self.wb.web_view.page().currentFrame().findAllElements('iframe')

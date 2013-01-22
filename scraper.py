@@ -8,12 +8,13 @@ import sys
 
 from webbrowser import WebBrowser
 
+app = QApplication(sys.argv)
+
 
 class TFBScrape(object):
     def __init__(self):
         self.links = []
         self.streams = []
-        self.app = QApplication(sys.argv)
         self.wb = WebBrowser()
         self.timer_process_links = QTimer(self.wb)
         self.timer_get_sc_link = QTimer(self.wb)
@@ -37,7 +38,7 @@ class TFBScrape(object):
             self.wb.event_loop.exec_()
 
         self.wb.app.exit()
-        self.app.exit()
+        app.exit()
 
     def process_iframe_links(self):
         self.links.extend([ e.attribute('src') for e in self.wb.web_view.page().currentFrame().findAllElements('iframe')

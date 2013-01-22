@@ -35,8 +35,6 @@ class TFBScrape(object):
             self.timer_get_sc_link.start(10000)
             self.wb.event_loop.exec_()
 
-        self.wb.app.exit()
-
     def process_iframe_links(self):
         self.links.extend([ e.attribute('src') for e in self.wb.web_view.page().currentFrame().findAllElements('iframe')
                        if 'soundcloud.com' in e.attribute('src').lower() ])
@@ -63,4 +61,5 @@ class TFBScrape(object):
 if __name__ == "__main__":
     tfb_scraper = TFBScrape()
     tfb_scraper.run()
+    tfb_scraper.wb.app.exit()
     print '\n'.join(tfb_scraper.streams)

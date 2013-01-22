@@ -20,7 +20,6 @@ def get_playlist():
         path = os.path.join('/tmp', filename)
         with open(path, 'w') as fd:
             fd.write('\n'.join(tfb_scraper.streams))
-        links = []
         return custom_static_file(filename, root='/tmp', download=filename,
             custom_headers={'Set-Cookie': 'fileDownload=true; path=/'})
     response.body = 'No streams found.'

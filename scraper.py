@@ -31,6 +31,7 @@ def get_sc_link():
     wb.event_loop.exit()
 
 def main():
+    links, streams = [], [] # Clear out the lists
     wb.web_view.load(QUrl('http://topfloorbeats.com/'))
     # wb.web_view.show()
     timer_process_links.start(10000)

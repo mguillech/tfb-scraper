@@ -18,7 +18,7 @@
             $.fileDownload('/get-playlist/', {
                 successCallback: function(url) {
                     $('#loading img').remove();
-                    $('#loading').append('<h1>DONE!</h1>');
+                    $('#loading').append('<div><h1>DONE!</h1><p>Please click <a href="#" onclick="location.reload(true)">here</a> to reload the page</div>');
                 }
             });
         });

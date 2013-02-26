@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 	</head>
 	<body>
-	    <p>Please wait while I get your playlist...</p>
+	    <p>Please wait while I get your playlist, sir...</p>
 	    <div id="loading">
 	        <img src="/img/loading.gif" />
         </div>
